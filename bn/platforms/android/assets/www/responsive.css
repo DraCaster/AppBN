@@ -1,0 +1,188 @@
+@media screen and (max-width: 520px) {
+
+ body {
+        margin: 0;
+        padding: 0;
+       
+   }
+
+    #tit{
+        font-size: 15px;
+        text-align: center;
+        margin: 20px;
+        font-family: 'Patrick Hand SC', cursive;
+     }
+     #tit2{
+        font-family: 'Patrick Hand SC', cursive;
+        text-align: center;
+        font-size: 10px;
+        margin: 10px;
+     }
+     #tit3{
+        font-family: 'Patrick Hand SC', cursive;
+        text-align: center;
+        font-size: 10px;
+        margin: 0 auto;
+         clear: both;
+     }
+     #contenedor-juego {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+
+    td{
+     border: 1px solid black;
+        height: 21px;
+        width: 30px;
+     }
+
+    #contenedor-barcos{
+
+        background: white;
+        border-radius: 2px;
+    }
+    .celda-fichas{
+        height: 21px;
+        width: 24px;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+    }
+
+.celda-fichas-abre{
+    width: 24px; 
+     height: 21px; 
+      border-style: solid; 
+     display: inline-block;
+     border-radius: 100px 0px 0px 100px;
+     border-width: 1px 1px 1px 1px;
+
+}
+
+.celda-fichas-cierra{
+    width: 24px; 
+     height: 21px; 
+      border-style: solid;  
+     display: inline-block;
+     border-radius: 0 100px 100px 0;
+     border-width: 1px 1px 1px 1px;
+}
+
+
+    #barco1{
+    	 display: inline-block;
+        width: 49%;
+    }
+    #barco2{
+    	 display: inline-block;
+        width: 49%;
+    }
+    #barco3{ 
+    	 display: inline-block;
+        width: 49%;
+    }
+    #barco4{
+    	 display: inline-block;
+        width: 49%;
+    }
+    #barco5{
+        width: 48%;
+    }
+    #barco6{
+    	 display: inline-block;
+        width: 48%;
+    }
+
+    .boton1{
+        border-radius: 10px;
+        width: 100px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .boton3{
+        border-radius: 10px;
+        width: 50px;
+        height: 35px;
+    }
+
+    .imagen{
+        margin-top: 20px;
+        width: 50%;
+     }
+
+    #t1{
+        margin-top: 1cm;
+        font-size: 40px;
+       
+    }
+
+    #t2{
+        font-size: 20px;
+    }
+    #t3{
+        font-size: 20px;
+
+    }
+    .center{
+    text-align: center;
+}
+    ul#ranking {
+        list-style: none;
+    
+    }
+    #ranking li {
+        margin-bottom: 12px;
+    }
+    #ranking .nombre {
+        width: 200px;
+    }
+
+    .puesto{
+        display: inline-block;
+        width: 23px;
+        background-color: #FFA07A;
+    }
+
+    .nombre {
+        display: inline-block;
+        width: 260px;
+    }
+ 
+
+
+
+ 
+
+    div#contenedor-humano{
+    width: 100%;
+    border-radius: 2px;
+    margin: 0;
+    display:block;
+  
+}
+
+    div#contenedor-computadora{
+        width: 100%;
+        text-align: right;
+        margin: 0;
+        display: none;
+       
+    }
+}
+
+.mostrarHumano{
+    display: block;
+}
+
+.mostrarPc{
+    display: block;
+}
+
+.ocultarPc{
+    display: none;
+}
+
+
+.ocultarHumano{
+    display: none;
+}

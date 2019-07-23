@@ -1,0 +1,31 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.phonegap.batallanaval"
+        }
+    }
+}
