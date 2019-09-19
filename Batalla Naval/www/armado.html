@@ -2,17 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <div id="logo"> <img src="imagenes/Batalla Naval 03.gif"  id="logotipo">    </div>
 	<title>Batalla Naval</title>
+	<link rel="icon" type="image/png" href="icon.png" />
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="responsive.css">
-	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 	<body onload="iniciarCeldas(); ">
 		 <div id="contenedor-juego" >
 		 		<h1 class="tit">Batalla naval</h1>
-				<h1 class="tit2">Ubicacion de los barcos</h1>
+				<h1 class="tit1">Ubicacion de los barcos</h1>
 			 <div id="contenedor-tablero">
 					<table class="centertable" id="humano">
 				
@@ -26,8 +24,6 @@
 						    <td>6</td>
 						    <td>7</td>
 						    <td>8</td>
-						    <td>9</td>
-						    <td>10</td>
 						  </tr>
 						  <tr>
 						    <td>A</td>
@@ -39,8 +35,6 @@
 						    <td> <div id="celda-1-6"> </div></td>
 						    <td> <div id="celda-1-7"> </div></td>
 						    <td> <div id="celda-1-8"> </div></td>
-						    <td> <div id="celda-1-9"> </div></td>
-						    <td> <div id="celda-1-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>B</td>
@@ -52,8 +46,6 @@
 						    <td> <div id="celda-2-6"> </div></td>
 						    <td> <div id="celda-2-7"> </div></td>
 						    <td> <div id="celda-2-8"> </div></td>
-						    <td> <div id="celda-2-9"> </div></td>
-						    <td> <div id="celda-2-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>C</td>
@@ -65,8 +57,6 @@
 						    <td> <div id="celda-3-6"> </div></td>
 						    <td> <div id="celda-3-7"> </div></td>
 						    <td> <div id="celda-3-8"> </div></td>
-						    <td> <div id="celda-3-9"> </div></td>
-						    <td> <div id="celda-3-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>D</td>
@@ -78,8 +68,6 @@
 						    <td> <div id="celda-4-6"> </div></td>
 						    <td> <div id="celda-4-7"> </div></td>
 						    <td> <div id="celda-4-8"> </div></td>
-						    <td> <div id="celda-4-9"> </div></td>
-						    <td> <div id="celda-4-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>E</td>
@@ -91,8 +79,6 @@
 						    <td> <div id="celda-5-6"> </div></td>
 						    <td> <div id="celda-5-7"> </div></td>
 						    <td> <div  id="celda-5-8"> </div></td>
-						    <td> <div id="celda-5-9"> </div></td>
-						    <td> <div id="celda-5-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>F</td>
@@ -104,8 +90,6 @@
 						    <td> <div id="celda-6-6"> </div></td>
 						    <td> <div id="celda-6-7"> </div></td>
 						    <td> <div id="celda-6-8"> </div></td>
-						    <td > <div id="celda-6-9"> </div></td>
-						    <td> <div id="celda-6-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>G</td>
@@ -117,8 +101,6 @@
 						    <td> <div id="celda-7-6"> </div></td>
 						    <td> <div id="celda-7-7"> </div></td>
 						    <td> <div id="celda-7-8"> </div></td>
-						    <td> <div id="celda-7-9"> </div></td>
-						    <td> <div id="celda-7-10"> </div></td>
 						  </tr>
 						  <tr>
 						    <td>H</td>
@@ -130,38 +112,10 @@
 						    <td> <div id="celda-8-6"> </div></td>
 						    <td> <div id="celda-8-7"> </div></td>
 						    <td> <div id="celda-8-8"> </div></td>
-						    <td> <div id="celda-8-9"> </div></td>
-						    <td> <div id="celda-8-10"> </div></td>
-						  </tr>
-						  <tr>
-						    <td>I</td>
-						    <td> <div id="celda-9-1"> </div></td>
-						    <td> <div id="celda-9-2"> </div></td>
-						    <td> <div id="celda-9-3"> </div></td>
-						    <td> <div id="celda-9-4"> </div></td>
-						    <td> <div id="celda-9-5"> </div></td>
-						    <td> <div id="celda-9-6"> </div></td>
-						    <td> <div id="celda-9-7"> </div></td>
-						    <td> <div id="celda-9-8"> </div></td>
-						    <td> <div id="celda-9-9"> </div></td>
-						    <td> <div id="celda-9-10"> </div></td>
-						  </tr>
-						  <tr>
-						    <td>J</td>
-						    <td> <div id="celda-10-1"> </div></td>
-						    <td> <div id="celda-10-2"> </div></td>
-						    <td> <div id="celda-10-3"> </div></td>
-						    <td> <div id="celda-10-4"> </div></td>
-						    <td> <div id="celda-10-5"> </div></td>
-						    <td> <div id="celda-10-6"> </div></td>
-						    <td> <div id="celda-10-7"> </div></td>
-						    <td> <div id="celda-10-8"> </div></td>
-						    <td> <div id="celda-10-9"> </div></td>
-						    <td> <div id="celda-10-10"> </div></td>
 						  </tr>
 					</table>
 			</div>
-	    		<div id="tit3">Haga click en el tablero para ubicar el barco selecionado</div>
+	    		<div id="tit3">Hace click en el tablero para ubicar el barco selecionado</div>
 	    		<div class="center margen"> 
 	    			<div class="ubicacion"> <input type="radio" name="ubicacion" id="ubicacionH" value="1">Barco horizontal &nbsp; &nbsp;</input> </div>
 	    		    <div class="ubicacion"> <input type="radio" name="ubicacion" id="ubicacionV" value="2">Barco vertical</input> </div>

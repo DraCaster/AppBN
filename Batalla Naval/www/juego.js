@@ -27,8 +27,8 @@ var array_barcosC = [];
 /* *********** FUNCIONES DE INICIALIZACION ******************** */
 
 function iniciarCeldas(){
-	for(var i=1; i<=10; i++){
-		for(var j=1; j<=10; j++){
+	for(var i=1; i<=8; i++){
+		for(var j=1; j<=8; j++){
 			var celda = document.getElementById("celda-"+i+"-"+j);
 			celda.setAttribute("onclick","ubicar(event)");
 			celda.setAttribute("data-valor","vacia");
@@ -40,8 +40,8 @@ function iniciarCeldas(){
 }
 
 function iniciarTableros(){
-	for(var i=1;i<=10; i++){
-		for(var j=1; j<=10; j++){
+	for(var i=1;i<=8; i++){
+		for(var j=1; j<=8; j++){
 			var celda = document.getElementById("celdaH-"+i+"-"+j);
 			celda.setAttribute("data-x",j);
 			celda.setAttribute("data-y",i);
@@ -107,8 +107,8 @@ function asignarTableros(){ //barcos de los dos tableros
     var i=0;
     var ok = true;
 
-    var pos_x = getRandomInt(1,11); 
-    var pos_y = getRandomInt(1,11); 
+    var pos_x = getRandomInt(1,9); 
+    var pos_y = getRandomInt(1,9); 
     var orient = getRandomInt(1,3); // 1 es para horizontal 2 para vertical
 
     while (i <6){	
@@ -144,13 +144,13 @@ function asignarTableros(){ //barcos de los dos tableros
         		hundido: "no"
        		 });
     		i++;
-    		var pos_x = getRandomInt(1,11); 
-    		var pos_y = getRandomInt(1,11); 
+    		var pos_x = getRandomInt(1,9); 
+    		var pos_y = getRandomInt(1,9); 
     		var orient = getRandomInt(1,3); // 1 es para horizontal 2 para vertical
     	} //end if principal
     	else {
-    		var pos_x = getRandomInt(1,11); 
-   			var pos_y = getRandomInt(1,11); 
+    		var pos_x = getRandomInt(1,9); 
+   			var pos_y = getRandomInt(1,9); 
     		var orient = getRandomInt(1,3); // 1 es para horizontal 2 para vertical
     	}
     }
@@ -165,7 +165,7 @@ function verificarPosicion(x,y,o,long){
 	if (o== 1){ //horizontal
 
 		var aux = parseInt(x) + parseInt(long) - 1;
-		if (aux > 10) { //si el barco se cae del tablero
+		if (aux > 8) { //si el barco se cae del tablero
 			return false;
 		}
 		else { //evaluar si hay posiciones ocupadas
@@ -185,7 +185,7 @@ function verificarPosicion(x,y,o,long){
 	} // end if horizontal
 	else { //vertical
 		var aux = parseInt(y) + parseInt(long) -1;
-		if (aux > 10){
+		if (aux > 8){
 			return false;
 		}
 		else {
@@ -332,13 +332,13 @@ function cambio_tablero(){
 
 
 function movimientoComputadora(){
-	var pos_x = getRandomInt(1,11);
-	var pos_y = getRandomInt(1,11);
+	var pos_x = getRandomInt(1,9);
+	var pos_y = getRandomInt(1,9);
 	var celda = getCelda(pos_x,pos_y,DATA2["jugadorActual"]);
 
 	while(celda.dataset.marca == "si"){ //si ya jugo en esta casilla 
-		var pos_x = getRandomInt(1,11);
-		var pos_y = getRandomInt(1,11);
+		var pos_x = getRandomInt(1,9);
+		var pos_y = getRandomInt(1,9);
 		var celda = getCelda(pos_x,pos_y,DATA2["jugadorActual"]);
 	}
 	if (celda.dataset.valor == "vacia") { //si esa celda esta vacia
@@ -471,7 +471,7 @@ function ubicarHorizontal(x,y,long){
 function verifHorizontal(x,y,long){
 
 	var aux = parseInt(x) + parseInt(long) - 1;
-	if (aux > 10) {
+	if (aux > 8) {
 		alert("El barco se cae");
 		return (false);
 	}
@@ -497,7 +497,7 @@ function verifVertical(x,y,long){
 
 	var aux = parseInt(y) + parseInt(long) - 1; 	
 
-	if (aux > 10) {
+	if (aux > 8) {
 		alert("El barco se cae");
 		return (false);
 	}

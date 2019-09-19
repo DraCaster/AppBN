@@ -28,11 +28,16 @@ td{
 
  h1, h2{
     color: #778899;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Principal', cursive;
 }
 
 p.sansserif {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: Principal;
+    src: url(font/PatrickHandSC-Regular.ttf);
 }
 
 .stroke {
@@ -46,7 +51,7 @@ p.sansserif {
  	font-size: 40px;
  	text-align: center;
  	margin: 20px;
- 	font-family: 'Patrick Hand SC', cursive;
+ 	font-family: 'Principal', cursive;
     text-shadow: 4px 4px 4px #aaa; /*sombreado*/
  }
 
@@ -54,17 +59,15 @@ p.sansserif {
 	font-size: 30px;
 	text-align: center;
 	margin: 20px;
-	font-family: 'Patrick Hand SC', cursive;
+	font-family: 'Principal', cursive;
 }
-
- #tit2{
- 	font-family: 'Patrick Hand SC', cursive;
+.tit2{
+ 	font-family: 'Principal', cursive;
  	text-align: center;
  	font-size: 20px;
- 	margin: 10px;
  }
  #tit3{
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Principal', cursive;
     text-align: center;
     font-size: 20px;
     /*margin: 0 auto;*/
