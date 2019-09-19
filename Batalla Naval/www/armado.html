@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
 	<title>Batalla Naval</title>
 	<link rel="icon" type="image/png" href="icon.png" />
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="./css/alertify.core.css">
+	<link rel="stylesheet" type="text/css" href="./css/alertify.default.css">
 </head>
 	<body onload="iniciarCeldas(); ">
 		 <div id="contenedor-juego" >
@@ -13,7 +15,6 @@
 				<h1 class="tit1">Ubicacion de los barcos</h1>
 			 <div id="contenedor-tablero">
 					<table class="centertable" id="humano">
-				
 						  <tr>
 						    <td></td>
 						    <td>1</td>
@@ -147,6 +148,7 @@
 				<button type="button" class="button1" id="margen1" onclick= "window.location.href= 'index.html'">Inicio</button>
 				</td>
 			</div>
-			<script src="juego.js"></script>
+			<script src="./js/alertify.js"></script>
+			<script src="./js/juego.js"></script>
 	</body>
 </html>

@@ -444,13 +444,11 @@ function seleccionarSiguienteBarco(){
 }
 
 function ubicarVertical(x,y,long){
-	
 	for (var i = 0; i < long; i++) {
 		var celda = document.getElementById("celda-"+y+"-"+x);
 		celda.className+=" pintarcelda";
 		celda.setAttribute("data-valor","llena");
 		y++;
-
 	}
 	seleccionarSiguienteBarco();
 }
@@ -559,7 +557,6 @@ function ubicarBarco(x,y){
 				window.location.href="jugar.html";
 			}
 		}
-		
 	}
 	else {
 		var V = document.getElementById("ubicacionV").checked;
@@ -578,7 +575,9 @@ function ubicarBarco(x,y){
 		
 	} //end else
 	if (V == false){
-		alert("Elija horizontal o vertical");
+		alertify.alert("<img src='./img/img1.png'> <h1><b> &iexcl; ELEGI HORIZONTAL O VERTICAL !</h1>", function() {
+        //aqui introducimos lo que haremos tras cerrar la alerta.
+    });
 	}
 
 }
@@ -587,31 +586,42 @@ function ubicar(event){
 	var ubicacion = event.target; //obtengo la celda elegida
 	var ubicacion_x = ubicacion.dataset.x;
 	var ubicacion_y = ubicacion.dataset.y; //obtengo las coordenadas de la celda
-
 	ubicarBarco(ubicacion_x,ubicacion_y);
-
 }
 
 
 /* **************** OTRAS FUNCIONES DEL JUEGO ************ */
 
 function reiniciar(event) {
-    if (confirm('Estas seguro?')) {
-        window.location.reload();
-    } 
+	alertify.confirm("<img src='./img/img1.png'> <h1><b> Estas seguro? </b></h1>", function(e) {
+        if (e) {
+            alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
+            setTimeout(function() {
+                window.location.reload(); 
+            }, 1300);
+        } else {
+            alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
+        }
+    });
 }
 
 function ganador(){
 	sonido_fin();
 	var score = getPuntos();
 	document.getElementById("ganador").innerHTML = "¡Hice "+score +" puntos!";
-
 }
+
 function abandonar(event){
-	confirmar=confirm("Estas seguro?"); 
-	if (confirmar){
-		window.location.href="index.html"
-	}
+	alertify.confirm("<img src='./img/img1.png'> <h1><b> Estas seguro? </b></h1>", function(e) {
+        if (e) {
+            alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
+            setTimeout(function() {
+                window.location.href="index.html"; 
+            }, 1300);
+        } else {
+            alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
+        }
+    });
 }
 
 function ocultarTableropc(){
@@ -666,12 +676,10 @@ function agregarAlRanking(){
 function entraEnElRanking(){
 	var score = getPuntos();
 	var ranking = getRanking();
-
 	if(ranking.length<10){ //si el ranking no esta ocupado del todo
 		return true;
 	}
 	return(score > ranking[9].value);
-
 }
 
 function mostrarRanking(){
@@ -692,7 +700,20 @@ function mostrarRanking(){
 function ganador(){
 	var score = getPuntos();
 	document.getElementById("ganador").innerHTML = "Conseguiste: "+score +" puntos!!";
-	if (entraEnElRanking()){   //verifica si estas entre los 10 mejores
-		agregarAlRanking();
+	if (entraEnElRanking()){  
+	alertify.confirm("<img src='./img/img1.png'> <h1><b>&iexcl; FELICIDADES ! ENTRASTE AL RANKING. <br> DESEAS APARECER EN EL? </b></h1>", function(e) {
+        if (e) {
+            alertify.success("ELEGISTE '" + alertify.labels.ok + "'");
+            setTimeout(function() {
+                agregarAlRanking();
+            }, 1300);
+        } else {
+            alertify.error("ELEGISTE '" + alertify.labels.cancel + "'");
+            setTimeout(function() {
+              window.location.href="index.html";
+            }, 1300);
+        }
+    }); 
+		
 	}
 }
